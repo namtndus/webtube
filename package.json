@@ -1,0 +1,29 @@
+{
+  "name": "webtube",
+  "version": "1.0.0",
+  "description": "wetube clone built using Nodejs, Ezpress, MongoDB, and ES6",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namtndus/webtube.git"
+  },
+  "scripts": {
+    "dev": "nodemon -L --exec babel-node src/sever.js"
+  },
+  "author": "suyeon nam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namtndus/webtube/issues"
+  },
+  "homepage": "https://github.com/namtndus/webtube#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "nodemon": "^2.0.7"
+  }
+}
