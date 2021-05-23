@@ -1,23 +1,19 @@
-import express from "express"
-import morgan from "morgan"
+import express from "express";
+import morgan from "morgan";
+import globalRouter from "./routers/globalRouter";
+import userRouter from "./routers/userRouter";
+import videoRouter from "./routers/videoRouter";
 
 const app = express();
 const logger = morgan("dev");
 
 const PORT = 4000;
 
-const handelHome = (req, res) => {
-    return res.send("I still love you");
-};
-
-const handleLogin = (req, res) => {
-    res.send("login here!");
-}
-
-
 app.use(logger);
-app.get("/", handelHome);
-app.get("/login", handleLogin);
+
+app.use("/", globalRouter);
+app.use("/users", userRouter);
+app.use("/videos", videoRouter);
 
 
 const handleListening = () => {
