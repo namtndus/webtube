@@ -1,13 +1,10 @@
 import express from "express"
+import morgan from "morgan"
 
 const app = express();
+const logger = morgan("dev");
 
 const PORT = 4000;
-
-const logger = (req, res, next) => {
-    console.log(`${req.method} ${req.url}`);
-    next();
-}
 
 const handelHome = (req, res) => {
     return res.send("I still love you");
@@ -18,7 +15,7 @@ const handleLogin = (req, res) => {
 }
 
 
-
+app.use(logger);
 app.get("/", handelHome);
 app.get("/login", handleLogin);
 

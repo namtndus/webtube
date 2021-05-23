@@ -1,13 +1,13 @@
 # Wetube Reloaded
 
 / -> Home
-/join -> Join
-/login -> Login
-/search -> Search
 
+/users/join -> Join
+/users/login -> Login
 /users/edit -> Edit Profile
 /users/delete -> Delete user
 
+/videos/search -> Search
 /videos/watch -> Watch Video
 /videos/edit -> Edit Video
 /videos/delete -> Delete Video
